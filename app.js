@@ -9,9 +9,7 @@ const mountRoutes = require( './routes' );
 app.use( bodyParser.json() );
 app.use( bodyParser.urlencoded( { extended: true } ) );
 
-app.get( '/', ( req, res, next ) => {
-	res.send( { msg: "hello client "} );
-});
+app.use( express.static( './public/build' ) );
 
 app.listen( port, () => {
 	console.log( `Server started on http://localhost:${ port }/` );

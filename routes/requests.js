@@ -7,7 +7,7 @@ const router = new Router();
 module.exports = router;
 
 router.get( '/', async ( req, res ) => {
-	Request.all( ( data ) => {
+	Request.all( ( err, data ) => {
 		const response = {
 			responseCode: 0,
 			data: data || []

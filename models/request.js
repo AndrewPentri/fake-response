@@ -16,7 +16,8 @@ class Request {
 
 	static add( data, cb ) {
 		const { uri, method, body } = data;
-		db.run( 'insert into request_info values (?, ?, ?)', uri, method, body, cb );
+		console.log( uri, method, body )
+		db.run( 'insert into request_info(uri, method, body) values(?, ?, ?)', uri, method, body, cb );
 	}
 
 	static remove( id, cb ) {

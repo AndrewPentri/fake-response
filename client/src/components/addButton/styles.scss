@@ -1,0 +1,22 @@
+@import "../../variables";
+
+.add-button {
+  background: $color-ok;
+  color: $text-light;
+  width: 48px;
+  height: 48px;
+  border: none;
+  border-radius: 100%;
+  box-shadow: 0 3px 2px 2px $base-shadow-color;
+  font-size: 32px;
+  transition-duration: 0.5s;
+  cursor: pointer;
+  margin-left: 370px; // TODO как только появится searchField сделать отсутп в searchField
+  user-select: none;
+
+  &:hover {
+    background: rgba(100, 189, 93, 0.75);
+    transition-duration: 0.5s;
+    color: white;
+  }
+}
